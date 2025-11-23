@@ -1,0 +1,15 @@
+#Project Euler problem 1:
+listofthree = []
+listoffive = []
+totalthree = 0
+for i in range (0,1000,3):
+    listofthree.append(i)
+for j in range (0,1000,5):
+    listoffive.append(j)
+for k in listofthree:
+    totalthree += k
+for l in listoffive:
+    if l not in listofthree:
+        totalthree += l
+print (totalthree)
+
