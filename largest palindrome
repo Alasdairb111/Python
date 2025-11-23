@@ -1,0 +1,10 @@
+#Project Euler problem 4:
+largest_palin = 0
+for a in range(100,1000):
+    for b in range(100,1000):
+        product = a * b
+        palin_str = str(product)
+        if palin_str == palin_str[::-1]:
+            if product > largest_palin:
+                largest_palin = product
+print(largest_palin)
