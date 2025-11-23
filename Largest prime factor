@@ -1,0 +1,20 @@
+#Project Euler problem 3:
+possibles = []
+large = 600851475143
+root_of_final = int(large ** 0.5)
+
+for i in range (1,root_of_final+1):
+        if large % i == 0:
+            possibles.append(i)
+            possibles.append(large//i)
+
+            
+def find_primes_of_large(num):
+    if num < 2:
+        return False
+    for k in range (2,int(num**0.5)+1):
+        if num % k == 0:
+            return False
+    return True
+primes = [num for num in possibles if find_primes_of_large(num)]
+print (max (primes))
