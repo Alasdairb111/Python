@@ -1,0 +1,13 @@
+students = []
+number_of_students = int(input())
+    
+for x in range(1,number_of_students+1):
+    student_name = str(input())
+    grade = float(input())
+    students.append([student_name,grade])
+students = sorted(students, key=lambda x:x[1])
+lowest = students[0][1]
+second_lowest = min([grade for student_name,grade in students if grade != lowest])
+for name, grade in sorted(students):
+    if grade == second_lowest:
+        print(name)
