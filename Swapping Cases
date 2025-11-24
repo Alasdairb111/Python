@@ -1,0 +1,8 @@
+def swap_case(s):
+    swapped_message = ""
+    for i in s:
+        if i.isupper():
+            swapped_message += i.lower()
+        else:
+            swapped_message += i.upper()
+    return swapped_message
