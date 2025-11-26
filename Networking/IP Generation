@@ -1,0 +1,28 @@
+import random
+#make ip range
+ips = []
+low = input("Input lower IP address here: ")
+high = input("Input higher IP address here: ")
+
+#make ip range split
+lows = list(map(int, low.split(".")))
+highs = list(map(int, high.split(".")))
+
+#make loop to generate ip
+for i in range(3):
+    ipaddr = []
+    for j in range(4):
+        if highs[j] - lows[j] == 0:
+            ipaddr.append(j)
+        else:
+            ipaddr.append(random.randint(lows[j],highs[j]))
+            
+    #turn indiviual elements into ip format
+    ip = ".".join(list(map(str,ipaddr)))
+    #add the ip to a list
+    ips.append(ip)
+#make it all happen 3x # above
+#print to console
+for ip in ips:
+    print(ip)
+
