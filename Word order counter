@@ -1,0 +1,14 @@
+n = int(input())
+counter = {}
+amount = []
+
+for _ in range(n):
+    word = input().strip()
+    if word in counter:
+        counter[word] += 1
+    else:
+        counter[word] = 1
+        amount.append(word)
+
+print(len(amount))
+print(" ".join(str(counter[w]) for w in amount))
