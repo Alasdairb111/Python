@@ -1,0 +1,11 @@
+T = int(input())
+a = None
+b = None
+ze = "integer division or modulo by zero"
+ve = "invalid literal for int() with base 10: "
+for i in range(T):
+    (a,b) = input().split()
+    try:
+        print(int(a)//int(b))
+    except Exception as e:
+        print("Error Code: ",e,sep="")
