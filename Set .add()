@@ -1,0 +1,6 @@
+N = int(input())
+country = set()
+for l in range(N):
+    n = input()
+    country.add(n)
+print(len(country))
