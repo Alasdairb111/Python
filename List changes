@@ -1,0 +1,22 @@
+if __name__ == '__main__':
+    n = int(input())
+    L = []
+    
+    for _ in range(n):
+        command = input().split()
+        operation = command[0]
+
+        if operation == "insert":
+            L.insert(int(command[1]), int(command[2]))
+        elif operation == "print":
+            print(L)
+        elif operation == "remove":
+            L.remove(int(command[1]))
+        elif operation == "append":
+            L.append(int(command[1]))
+        elif operation == "sort":
+            L.sort()
+        elif operation == "pop":
+            L.pop()
+        elif operation == "reverse":
+            L.reverse()
