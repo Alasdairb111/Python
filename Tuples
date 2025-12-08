@@ -1,0 +1,15 @@
+n = int(raw_input())
+elements = raw_input().split()
+t = tuple(map(int, elements))
+print(hash(t))
+
+#This only works in Python 2... I had tried in Python 3 with this:
+n = int(raw_input())
+elements = input().split()
+t = tuple(map(int, elements))
+print(hash(t))
+
+#And this:
+n = int(input())
+t = tuple(map(int, input().split()))
+print(hash(t))
