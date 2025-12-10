@@ -1,0 +1,18 @@
+def merge_the_tools(string, k):
+    n = len(string)
+    splitsamt = n/k
+    list = []
+    for i in range(0, len(string), k):
+        part = string[i:i+k]
+        unused = ""
+        for chars in part:
+            if chars not in unused:
+                unused += chars
+        print(unused)
+                
+        
+    
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
