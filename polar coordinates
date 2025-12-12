@@ -1,0 +1,18 @@
+#z = yj
+#coordinate  = r,φ (#alt237)
+#polar coordinates determined by modulus r and phase angle φ
+#converting z to polarcoordinate:
+#r = sqr root of x^2 and y^2
+#φ = counter clockwise angle from positie x axis to line segment that joins 'z' to origin
+#cmath.phase returns the phase of complex number z (argument of z)
+import cmath
+
+def find_values(z):
+    z = complex(z)
+    r = abs(z)                
+    phi = cmath.phase(z)      
+    
+    print(r)
+    print(phi)
+
+find_values(input())
