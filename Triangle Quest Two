@@ -1,0 +1,7 @@
+#forgot i wasn't allowed to use strings..
+for i in range(1,int(input())):
+    print(i*str(i))
+
+#real answer:
+for i in range(1,int(input())):
+    print(i * ((10**i - 1) // 9))
