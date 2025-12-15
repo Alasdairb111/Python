@@ -1,0 +1,4 @@
+import numpy
+original_shape = numpy.array(input().split(),int)
+changed_shape = numpy.reshape(original_shape,(3,3))
+print (changed_shape)
