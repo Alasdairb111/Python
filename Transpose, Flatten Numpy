@@ -1,0 +1,8 @@
+import numpy
+N,M = map(int,input().split())
+original = []
+for _ in range(N):
+    original.append(list(map(int, input().split())))
+original = numpy.array(original)
+print(numpy.transpose(original))
+print(original.flatten())
