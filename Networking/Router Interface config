@@ -1,0 +1,15 @@
+import ipaddress
+def cidr_to_mask(cidr):
+    net = ipaddress.ip_network(f"0.0.0.0/{cidr}", strict=False)
+    return str(net.netmask)
+def generate_router_config(interfaces):
+    config_lines = []
+    for interface, ip_cidr in interfaces.items():
+        ip, cidr = ip_cidr.split("/")
+        cidr = int(cidr)
+        mask = cidr_to_mask(cidr)
+        config_lines.append(f"interface {interface}")
+        config_lines.append(f" ip address {ip} {mask}")
+        config_lines.append(" no shutdown")
+        config_lines.append("")
+    return "\n".join(config_lines)
