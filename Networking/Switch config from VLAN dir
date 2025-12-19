@@ -1,0 +1,8 @@
+def generate_vlan_config(vlans):
+config_lines = []
+
+for vlan_id, vlan_name in vlans.items():
+    config_lines.append(f"vlan {vlan_id}")
+    config_lines.append(f" name {vlan_name}")
+
+return "\n".join(config_lines)
