@@ -1,0 +1,9 @@
+def create_vlans(vlan_names):
+vlans = {}
+vlan_id = 10
+
+for name in vlan_names:
+    vlans[vlan_id] = name
+    vlan_id += 10
+
+return vlans
