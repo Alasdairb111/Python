@@ -1,0 +1,8 @@
+import numpy
+N,M = map(int, input().split())
+two_d_array = []
+for values in range(N):
+    two_d_array.append(list(map(int, input().split())))
+two_d_array = numpy.array(two_d_array)
+sumof = numpy.sum(two_d_array, axis = 0)
+print (numpy.prod(sumof))
