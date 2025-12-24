@@ -1,0 +1,8 @@
+import numpy
+A = []
+N = int(input())
+for n in range(N):
+    A.append(list(map(float, input().split())))
+A = numpy.array(A)
+det = numpy.linalg.det(A)
+print(round(det, 2))
