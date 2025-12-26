@@ -1,0 +1,12 @@
+from itertools import combinations
+
+N = int(input())
+letters = input().split()
+K = int(input())
+total = 0
+count = 0
+for combo in combinations(letters, K):
+    total += 1
+    if 'a' in combo:
+        count += 1
+print(f"{count / total:.12f}")
