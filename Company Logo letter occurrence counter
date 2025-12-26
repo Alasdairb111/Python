@@ -1,0 +1,24 @@
+Merry Christmas
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+counter = {}
+counterlist = []
+if __name__ == '__main__':
+    s = input()
+    for i in s:
+        if i not in counter:
+            counter[i] = 1
+        else:
+            counter[i] += 1
+counterlist = counter.items()
+counterlist = sorted(counter.items(), key=lambda x: (-x[1], x[0]))
+counterlistready = counterlist[0:3]
+for char,amount in counterlistready:
+    print(char,amount)
